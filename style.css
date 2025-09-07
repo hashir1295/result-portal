@@ -1,0 +1,56 @@
+/* Minimal clean styling per your spec */
+:root { --card-w: 380px; }
+html,body{height:100%;margin:0;}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#e0e0e0; /* grey background */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.card{
+  width:var(--card-w);
+  background:#fff;
+  padding:28px;
+  border-radius:10px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.08);
+  text-align:center;
+}
+h1{
+  margin:0 0 6px 0;
+  font-size:20px;
+  font-weight:800;
+  color:#000; /* big bold black */
+}
+.sub{
+  margin:0 0 18px 0;
+  font-size:15px;
+  color:#333;
+}
+input{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #cfcfcf;
+  font-size:14px;
+  box-sizing:border-box;
+  margin-bottom:12px;
+}
+button{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:none;
+  background:#007BFF;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  font-size:15px;
+}
+button:active{transform:translateY(1px);}
+.msg{
+  margin-top:12px;
+  color:#c80000;
+  display:none;
+  font-size:13px;
+}
