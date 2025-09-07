@@ -18,7 +18,13 @@ function checkAndDownload() {
   }
   if (db[key]) {
     hideMessage();
-    window.open(db[key], '_blank', 'noopener');
+    // create a temporary <a> element to trigger download
+    const link = document.createElement('a');
+    link.href = db[key];
+    link.download = `${key}.pdf`; // the downloaded file will be named after the registration number
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   } else {
     showMessage('Invalid registration number. Please check and try again.');
   }
